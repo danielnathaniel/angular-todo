@@ -1,0 +1,10 @@
+<div class="app-container">
+  <h1>Todo List</h1>
+  <app-todo-form (addTodo)="addTodoItem($event)"></app-todo-form>
+  <app-todo-list
+    [todoList]="todoList"
+    (edit)="editTodoItem($event)"
+    (complete)="toggleComplete($event)"
+    (delete)="deleteTodoItem($event)"
+  ></app-todo-list>
+</div>

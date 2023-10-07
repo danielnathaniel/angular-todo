@@ -1,0 +1,14 @@
+<div class="todo-item">
+  <span [class.completed]="todo?.completed">{{ todo?.title }}</span>
+  <button (click)="onEditClick()">Edit</button>
+  <button (click)="onCompleteClick()">
+    {{ todo?.completed ? "Uncomplete" : "Complete" }}
+  </button>
+  <button (click)="onDeleteClick()">Delete</button>
+</div>
+
+<!-- Edit Form -->
+<div *ngIf="isEditing">
+  <input type="text" [(ngModel)]="selectedTodo.title" />
+  <button (click)="onSaveClick()">Save</button>
+</div>

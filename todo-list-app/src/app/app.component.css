@@ -1,0 +1,14 @@
+div {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
